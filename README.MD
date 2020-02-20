@@ -56,7 +56,7 @@ java -jar build/libs/project-example-0.0.1-SNAPSHOT.jar
 ```
 
 #Các biến thường sử dụng
-- `dns`: unique URI cho mỗi project - lấy giá trị này từ mục cài đặt trong sentry project
+- `dsn`: unique URI cho mỗi project - lấy giá trị này từ mục cài đặt trong sentry project
 - `stacktrace.app.packages`: Biến này giúp sentry highlight package của project này trên giao diện
 - `release`: định danh version hiện tại nhằm mục đích filter hoặc report lỗi theo bản release
 - `environment`: định danh môi trường, có thể dùng để filter alert - chỉ email khi environment = production
@@ -74,10 +74,10 @@ gradle build
 ```
 #### Chạy project
 ```shell script
-java -Dsentry.dns=${YOUR_DNS} sentry.enviroment=production -jar build/libs/project-example-0.0.1-SNAPSHOT.jar
+java -Dsentry.dsn=${YOUR_DSN} sentry.enviroment=production -jar build/libs/project-example-0.0.1-SNAPSHOT.jar
 ```
 
 Hoặc sử dụng System Environment Variable
 ```shell script
-SENTRY_DNS=${YOUR_DNS} SENTRY_ENVIRONMENT=production java -jar build/libs/project-example-0.0.1-SNAPSHOT.jar
+SENTRY_DSN=${YOUR_DSN} SENTRY_ENVIRONMENT=production java -jar build/libs/project-example-0.0.1-SNAPSHOT.jar
 ```
